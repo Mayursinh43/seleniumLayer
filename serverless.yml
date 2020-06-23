@@ -14,7 +14,7 @@ layers:
     compatibleRuntimes:
       - "python3.6"
   pandas:
-    path: selenium
+    path: pandas
     compatibleRuntimes:
       - "python3.6"
   chromedriver:
