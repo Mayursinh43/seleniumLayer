@@ -26,8 +26,16 @@ layers:
     description: chrome driver layer
     compatibleRuntimes:
       - "python3.6"
+  resources:
+    path: resources
+
 resources:
   Outputs:
+    ResourcesLayerExport:
+        Value:
+          Ref: ResourcesLambdaLayer
+        Export:
+          Name: ResourcesLambdaLayer
     SeleniumLayerExport:
         Value:
           Ref: SeleniumLambdaLayer
