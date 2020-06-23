@@ -17,6 +17,10 @@ layers:
     path: pandas
     compatibleRuntimes:
       - "python3.6"
+  requests:
+    path: requests
+    compatibleRuntimes:
+      - "python3.6"
   chromedriver:
     path: chromedriver
     description: chrome driver layer
@@ -34,6 +38,11 @@ resources:
           Ref: PandasLambdaLayer
         Export:
           Name: PandasLambdaLayer
+    RequestsLayerExport:
+        Value:
+          Ref: RequestsLambdaLayer
+        Export:
+          Name: RequestsLambdaLayer
     ChromedriverLayerExport:
       Value:
         Ref: ChromedriverLambdaLayer
